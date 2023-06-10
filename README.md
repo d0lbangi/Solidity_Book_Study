@@ -86,3 +86,26 @@
 | | | | | 인스턴스화에 try/catch 적용 |
 | | | | | 외부 함수에 try/catch 적용 |
 | | | | | try/catch 블록의 try 블록에서 오류가  |
+| | 8장 | 모디파이어/이넘/임포트/라이브러리 | 모디파이어 | 모디파이어의 개념과 정의 방법 |
+| | | | | 모디파이어의 정의 예시 |
+| | | | | 모디파이어의 함수 실행 순서 |
+| | | | 이넘 | 이넘의 정의 예시 |
+| | | | 임포트 | 임포트 예제 |
+| | | | | 상위 폴더에 있는 파일을 업로드 |
+| | | | 라이브러리 | 라이브러리의 특징 |
+| | | | | 라이브러리의 정의 |
+| | | | | 라이브러리의 사용 |
+| | | | | 실습: 오버플로를 막는 라이브러리 |
+| | 9장 | 이더 송수신 | address/payable/msg.sender/msg.value | address 자료형 |
+| | | | | payable 키워드 |
+| | | | | 전역 변수 msg.sender와 msg.value |
+| | | | 이더를 보내는 3가지 함수: send/call/transfer | |
+| | | | 함수 fallback과 receive | 함수 fallback의 기능 |
+| | | | | 솔리디티 버전 0.6 미만 fallback |
+| | | | | 솔리디티 버전 0.6 이상 fallback과 receive |
+| | | | 함수 call과 delegatecall | 함수 call |
+| | | | | 함수 delegatecall |
+
+
+
+
