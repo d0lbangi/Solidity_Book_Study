@@ -105,7 +105,7 @@
 | | | | | 솔리디티 버전 0.6 이상 fallback과 receive |
 | | | | 함수 call과 delegatecall | 함수 call |
 | | | | | 함수 delegatecall |
-
-
-
-
+| | 10장 | 메타마스크를 활용한 배포 | 스마트 컨트랙트 Random 게임 배포 | Random 게임 설명 |
+| | | | | Random 게임 스마트 컨트랙트 작성 |
+| | | | | 컴파일 |
+| | | | | 배포 |
