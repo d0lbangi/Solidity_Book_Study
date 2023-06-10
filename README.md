@@ -79,3 +79,10 @@
 | | | | 객체 지향 고급 | 다향성 |
 | | | | | 다중 상속 |
 | | | | | 추상화 |
+| | 7장 | 오류 및 예외 처리 | assert/revert/require | 컴파일러 버전에 따른 assert 가스비 비교 |
+| | | | | revert와 require 정의 방법 |
+| | | | try/catch | try/catch 구문 |
+| | | | | try/catch 정의 방법 |
+| | | | | 인스턴스화에 try/catch 적용 |
+| | | | | 외부 함수에 try/catch 적용 |
+| | | | | try/catch 블록의 try 블록에서 오류가  |
