@@ -1,0 +1,70 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_num",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "num",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Chapter6/Ex6-2.sol": "Ex6_2"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Chapter6/Ex6-2.sol": {
+			"keccak256": "0x71d948510827dec32849320455af10a3cb1527e2ac0a08103a76c5e770c6fd96",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://7172460d4c411c7258fde0fc6afa92fcee25313a31dda6c7c1b4f69cb9ed8b83",
+				"dweb:/ipfs/QmcRapPCLRkAL6H7oUqN9HPQLwDoGaKJRD4e323eEPVSke"
+			]
+		}
+	},
+	"version": 1
+}

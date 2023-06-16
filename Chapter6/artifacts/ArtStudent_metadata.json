@@ -1,0 +1,70 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_schoolHours",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "time",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Chapter6/Ex6-15.sol": "ArtStudent"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Chapter6/Ex6-15.sol": {
+			"keccak256": "0x752bdc5a431a6c576c7a9fb09ad05d2876297f210a792257eae40f3489741af1",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://02727c7d9a4a72ef65ebaaa34eca53c9c6fe282aec0b103b29b497072c5c332c",
+				"dweb:/ipfs/QmV6BL2myh4nDG5abJy1dRvQgXbGBrq2VHoZhJt7LgXgz9"
+			]
+		}
+	},
+	"version": 1
+}
