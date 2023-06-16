@@ -1,0 +1,17 @@
+함수 가시성 정의자(Function Visibility Specifiers)
+public: 외부와 내부에서 모두 볼 수 있음 (저장/상태 변수를 만드는 방문자 함수)
+private: 현재 계약에서만 볼 수 있음
+external: 외부에서만 볼 수 있음(함수만) - 메시지 호출 중(this.fun 통과)
+internal: 내부만 볼 수 있음
+
+수식부
+pure      for functions: 상태 변수를 수정하거나 접근할 수 없습니다. - 아직 강제적으로 실행되지 않았습니다.
+view      for functions: 상태 변수를 수정할 수 없습니다. - 아직 강제 집행되지 않았습니다.
+
+constant  for functions: view와 같다.
+
+payable   for functions: 함수가 호출과 동시에 이더를 수신할 수 있도록 허용
+constant  for state variables: 값을 부여할 수 없음(초기화 제외), 메모리 슬롯을 차지하지 않습니다.
+
+anonymous for 이벤트: 이벤트를 topic로 저장하지 않습니다.
+indexedfor event parameters: 매개 변수를 topic
