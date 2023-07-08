@@ -1,6 +1,3 @@
-<img src="./assets/XL.jpeg" alt="솔리디티 프로그래밍 완벽 가이드 - 예스24" width="280" title="Cover Image" align="right" />
-
-
 # 솔리디티 프로그래밍 완벽 가이드
 
 "솔리디티 프로그래밍 완벽 가이드" 책으로 공부하는 솔리디티 언어
