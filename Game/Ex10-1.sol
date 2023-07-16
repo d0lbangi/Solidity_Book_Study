@@ -1,3 +1,96 @@
+/*
+"OnlyOwner" Modifier Error:
+현재 코드에서 onlyOwner modifier를 사용하고 있지만, 해당 modifier에서 사용되는 owner 변수가 선언되지 않았습니다. 따라서 owner 변수를 선언하고 초기화해야 합니다.
+
+address public owner;
+생성자(constructor) 함수에서 owner 변수를 초기화하는 코드를 추가해야 합니다.
+
+owner = msg.sender;
+"Failed" Error:
+우승자에게 이더를 전송하는 코드에서 실패할 수 있는 상황을 다루지 않고 있습니다. msg.sender.call{value:address(this).balance}(""); 코드 실행 후 success 변수를 확인하여 실패한 경우에 대한 처리를 추가해야 합니다.
+(bool success, ) = msg.sender.call{value:address(this).balance}("");
+require(success, "Failed");
+*/
+
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >=0.7.0 < 0.9.0;
+
+contract Random {
+
+    event PaidAddress(address indexed sender, uint256 payment);
+    event WinnerAddress(address indexed winnder);
+
+    modifier onlyOwner {
+        require(msg.sender == owner, "Ownable : caller is not the owner");
+        _;
+    }
+
+    mapping (uint256 => mapping(address => bool)) public paidAddressList;
+
+    address public owner;
+
+    uint private winnerNumber = 0;
+    string private key1;
+    uint private key2;
+
+    uint public round = 1;
+    uint public playNumber = 0;
+
+    constructor(string memory _key1, uint _key2) {
+        owner = msg.sender;
+        key1 = _key1;
+        key2 = _key2;
+        winnerNumber = randomNumber();
+    }
+
+    receive() external payable {
+        require(msg.value == 10**16, "Must be 0.01 ether.");
+        require(paidAddressList[round][msg.sender] == false, "Must be the first time.");
+
+        paidAddressList[round][msg.sender] = true;
+        ++playNumber;
+
+        if(playNumber == winnerNumber){
+            (bool success, ) = msg.sender.call{value:address(this).balance}("");
+            require(success, "Failed");
+            playNumber = 0;
+            ++round;
+            winnerNumber = randomNumber();
+            emit WinnerAddress(msg.sender);
+        } else {
+            emit PaidAddress(msg.sender, msg.value);
+        } 
+    }
+
+    function randomNumber() private view returns(uint) {
+        uint num = uint(keccak256(abi.encode(key1))) + key2 + (block.timestamp) + (block.number);
+        return (num - ((num / 10) *10)) +1;
+    }
+
+    function setSecretKey(string memory _key1, uint _key2) public onlyOwner() {
+        key1 = _key1;
+        key2 = _key2;
+    }
+
+    function getSecretKey() public view onlyOwner() returns(string memory, uint) {
+        return(key1, key2);
+    }
+
+    function getWinnerNumber() public view onlyOwner() returns(uint256) {
+        return winnerNumber;
+    }
+
+    function getRound() public view returns(uint256) {
+        return round;
+    }
+
+    function getbalance() public view returns(uint256) {
+        return address(this).balance;
+    }
+}
+
+
+/*
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.7.0 < 0.9.0;
 
@@ -93,3 +186,5 @@ contract Random {
         return address(this).balance;
     }
 }
+
+*/
