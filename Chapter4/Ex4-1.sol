@@ -10,4 +10,6 @@ contract Ex4_1 {
         }
         return a;
     }
+    // a = 8  => a = 8
+    // a = 12 => a = 9
 }   
