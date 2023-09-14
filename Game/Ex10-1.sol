@@ -10,6 +10,8 @@ owner = msg.sender;
 우승자에게 이더를 전송하는 코드에서 실패할 수 있는 상황을 다루지 않고 있습니다. msg.sender.call{value:address(this).balance}(""); 코드 실행 후 success 변수를 확인하여 실패한 경우에 대한 처리를 추가해야 합니다.
 (bool success, ) = msg.sender.call{value:address(this).balance}("");
 require(success, "Failed");
+
+// Need in ReConfirmation 
 */
 
 // SPDX-License-Identifier: GPL-3.0
